@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>백엔드 개발자 최승명 :: Portfolio</title>
+    <link rel="stylesheet" th:href="@{/stylesheets/portfolio.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/282afddd53.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer th:src="@{/scripts/portfolio.js}"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-top">
+            <div class="top-left">
+                <span><i class="fa-solid fa-circle icon"></i></span>
+                <span><i class="fa-solid fa-circle icon"></i></span>
+                <span><i class="fa-solid fa-circle icon"></i></span>
+            </div>
+            <div class="title">
+                <span>Myung's - Portfolio.java</span>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="bottom-left">
+                <span>Hello
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </span>
+                <span>This_Is
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </span>
+                <span>Myung's Portfolio
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </span>
+                <span>
+                <img th:src="@{/images/class.png}" alt="">
+                    Home.java
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <aside id="aside">
+            <div class="side-top">
+                <div class="side-title">
+                    <div class="title">
+                        <img th:src="@{/images/project.png}" alt="">
+                        <span>Project</span>
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="side-contents">
+                <div class="content first">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/folder-blue.png}" alt="">
+                    <span>
+                        Portfolio
+                    </span>
+                </div>
+                <div class="content second">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <img th:src="@{/images/folder.png}" alt="">
+                    <span>
+                        Hello
+                    </span>
+                </div>
+                <div class="content third">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    <img th:src="@{/images/folder.png}" alt="">
+                    <span>
+                        This_Is
+                    </span>
+                </div>
+                <div class="content forth">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/package.png}" alt="">
+                    <span>
+                        Myung's Portfolio
+                    </span>
+                </div>
+                <div class="content fifth">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/class.png}" alt="">
+                    <span>
+                        Home.java
+                    </span>
+                </div>
+                <div class="content fifth">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/html.png}" alt="">
+                    <span>
+                        About_Me.html
+                    </span>
+                </div>
+                <div class="content fifth">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/css.png}" alt="">
+                    <span>
+                        Skiils.css
+                    </span>
+                </div>
+                <div class="content fifth">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/js.png}" alt="">
+                    <span>
+                        Project.js
+                    </span>
+                </div>
+                <div class="content fifth">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                    <img th:src="@{/images/xml.png}" alt="">
+                    <span>
+                        Contact.xml
+                    </span>
+                </div>
+            </div>
+        </aside>
+        <div class="content-container">
+            <div class="content-tab">
+                <div class="tab on">
+                    <img th:src="@{/images/class.png}" alt="">
+                    <span>
+                        Home.java
+                    </span>
+                    <img th:src="@{/images/x.png}" alt="" class="x">
+                </div>
+                <div class="tab">
+                    <img th:src="@{/images/html.png}" alt="">
+                    <span>
+                        About_Me.html
+                    </span>
+                    <img th:src="@{/images/x.png}" alt="" class="x">
+                </div>
+                <div class="tab">
+                    <img th:src="@{/images/css.png}" alt="">
+                    <span>
+                        Skiils.css
+                    </span>
+                    <img th:src="@{/images/x.png}" alt="" class="x">
+                </div>
+                <div class="tab">
+                    <img th:src="@{/images/js.png}" alt="">
+                    <span>
+                        Project.js
+                    </span>
+                    <img th:src="@{/images/x.png}" alt="" class="x">
+                </div>
+                <div class="tab">
+                    <img th:src="@{/images/xml.png}" alt="">
+                    <span>
+                        Contact.xml
+                    </span>
+                    <img th:src="@{/images/x.png}" alt="" class="x">
+                </div>
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        footer
+    </div>
+</div>
+</body>
+</html>
