@@ -83,64 +83,71 @@
                 </div>
             </div>
             <div class="side-contents">
-                <div class="content first">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content first on">
+                    <span class="arrow">
+                        <ion-icon class="off" name="chevron-forward-outline"></ion-icon>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </span>
                     <img th:src="@{/images/folder-blue.png}" alt="">
                     <span>
                         Portfolio
                     </span>
                 </div>
-                <div class="content second">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                <div class="content second on">
+                   <span class="arrow">
+                        <ion-icon class="off" name="chevron-forward-outline"></ion-icon>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </span>
                     <img th:src="@{/images/folder.png}" alt="">
                     <span>
                         Hello
                     </span>
                 </div>
-                <div class="content third">
-                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                <div class="content third on">
+                    <span class="arrow">
+                        <ion-icon class="off" name="chevron-forward-outline"></ion-icon>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </span>
                     <img th:src="@{/images/folder.png}" alt="">
                     <span>
                         This_Is
                     </span>
                 </div>
-                <div class="content forth">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content forth on">
+                    <span class="arrow">
+                        <ion-icon class="off" name="chevron-forward-outline"></ion-icon>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </span>
                     <img th:src="@{/images/package.png}" alt="">
                     <span>
                         Myung's Portfolio
                     </span>
                 </div>
-                <div class="content fifth" rel="home">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content fifth on" rel="home">
                     <img th:src="@{/images/class.png}" alt="">
                     <span>
                         Home.java
                     </span>
                 </div>
-                <div class="content fifth" rel="aboutMe">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content fifth on" rel="aboutMe">
                     <img th:src="@{/images/html.png}" alt="">
                     <span>
                         About_Me.html
                     </span>
                 </div>
-                <div class="content fifth" rel="skills">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content fifth on" rel="skills">
                     <img th:src="@{/images/js.png}" alt="">
                     <span>
                         Skiils.css
                     </span>
                 </div>
-                <div class="content fifth" rel="project">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content fifth on" rel="project">
                     <img th:src="@{/images/xml.png}" alt="">
                     <span>
                         Project.js
                     </span>
                 </div>
-                <div class="content fifth" rel="contact">
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="content fifth on" rel="contact">
                     <img th:src="@{/images/css.png}" alt="">
                     <span>
                         Contact.xml
@@ -206,7 +213,8 @@
                             </p>
                             <p></p>
                             <p>public class <span class="ml-10">Home {</span></p>
-                            <p><span class="ml-40 orange" >public</span><em class="orange ml-10">static</em><em class="ml-10">void</em><em
+                            <p><span class="ml-40 orange">public</span><em class="orange ml-10">static</em><em
+                                    class="ml-10">void</em><em
                                     class="space-em">main</em><span>(String[] args) {</span></p>
                             <p><span class="ml-80">System.<em style="color: rgb(150,120,170)">out</em>.println(<em
                                     class="space-em text" style="color: rgb(110, 135,95); margin-right: 10px">"Click Run Button!"</em>)</span>;
@@ -245,47 +253,49 @@
                             <p><span class="ml-20"> < /</span><em class="mr-10">head</em> > </p>
                             <p><span class="ml-20"> < </span> <em class="ml-10 mr-10">body</em> > </p>
                             <p><span class="ml-40"> < </span> <em class="ml-10 mr-10">header</em> <span class="mr-10">class</span>
-                                <span class="mr-10 green">= "introduce"</span> > </p>
+                                <span class="mr-10 green">= "greeting"</span> > </p>
                             <p>
                                 <span class="ml-60">
                                     <br>안녕하세요!<br>
                                 잠재력과 열정이 넘치는 신입 개발자, 최승명입니다!<br><br>
                                 </span>
                             </p>
+
+                            <p><span class="ml-40"> < /</span> <em class="mr-10">header</em> > </p>
+                            <p><span class="ml-40"> < </span> <em class="ml-10 mr-10">main</em> <span class="mr-10">class</span>
+                                <span class="mr-10 green">= "introduce"</span> >
+                            </p>
                             <p>
                                 <span class="ml-60">
-                                 대학교 학부시절 전공수업으로 처음 프로그래밍의 세계에 눈을 뜨고,<br>
+                                 <br>대학교 학부시절 전공수업으로 처음 프로그래밍의 세계에 눈을 뜨고,<br>
                                 보이지 않는 곳에서 세상을 돌아가게 만드는 백엔드에 흥미를 가지고 개발자의 꿈을 키워왔습니다.<br><br>
                                 </span>
                             </p>
                             <p>
                                 <span class="ml-60">
-                                 사람들과 소통하며 협업하는 것을 즐기며, 목표를 이룰 때 느끼는 성취감을 좋아하여 매사에 목표지향적인 자세로 임하고 있으며 목표 달성까지의 과정에서 발생하는
+                                 사람들과 소통하며 협업하는 것을 즐기며, 목표를 이룰 때 느끼는 성취감을 좋아하여 매사에 목표지향적인 자세로 임하고 있으며<br> 목표 달성까지의 과정에서 발생하는
                                 문제를 해결하는데 능숙합니다.<br>또한 새로운 것을 배우는 것을 좋아하며 새로운 지식을 습득하여 적절하게 활용하였을 때 느끼는 성취감을 좋아합니다.
                                 <br><br>
                                 </span>
                             </p>
                             <p>
                                 <span class="ml-60">
-                                 </span>
+
                                 '일단 시작하고 보자'<br><br>
                                 저의 좌우명입니다.<br>
-                                얼핏 보기에 어렵거나 불가능해보이는 일이라도 일단 시작을 하고 방법을 강구하다보면 그 과정에서 성장한다고 믿고 있습니다.
+                                얼핏 보기에 어렵거나 불가능해보이는 일이라도 일단 시작을 하고 방법을 강구하다보면 그 과정에서 성장한
+                                    다고 믿고 있습니다.
                                 <br><br>
+                                    </span>
                             </p>
-                            <p><span class="ml-40"> < /</span> <em class="mr-10">header</em> > </p>
-                            <p><span class="ml-40"> < </span> <em class="ml-10 mr-10">main</em> <span class="mr-10">class</span>
-                                <span class="mr-10 green">= "aaa"</span> > </p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+
                             <p><span class="ml-40"> < /</span> <em class="mr-10">main</em> > </p>
                             <p><span class="ml-40"> < </span> <em class="ml-10 mr-10">footer</em> <span class="mr-10">class</span>
                                 <span class="mr-10 green">= "education"</span> > </p>
-                            <br>
+                            <p></p>
                             <p><span class="ml-60">- 계명대학교 경영정보학과 졸업 (2023.02)</span></p>
                             <p><span class="ml-60">- 코리아 IT 아카데미 임베디드 풀스택 개발자 양성 과정 수료 (2023.02)</span></p>
-                            <br>
+                            <p></p>
                             <p><span class="ml-40"> < /</span> <em class="mr-10">footer</em> > </p>
                             <p><span class="ml-20"> < /</span> <em class="mr-10">body</em> > </p>
                             <p><span class="ml-10"> < /</span> <em class="mr-10">html</em> > </p>
@@ -339,11 +349,17 @@
                             </p>
                             <p class="white-gray">
                                 <em class="purple ml-40">console</em>.<em class="deep-yellow">log</em>(<em
-                                    class="purple">skills</em>[<em class="deep-green">'name'</em>] <em>[i]</em> <em class="ml-10">+</em> <em
+                                    class="purple">skills</em>[<em class="deep-green">'name'</em>] <em>[i]</em> <em
+                                    class="ml-10">+</em> <em
                                     class="ml-10 mr-10 deep-green"> '<em class="orange">\n</em>' </em> + <em
-                                    class="ml-10  purple">skills</em>[<em class="deep-green">'description'</em>]<em>[i]</em> <em>)</em><em
+                                    class="ml-10  purple">skills</em>[<em
+                                    class="deep-green">'description'</em>]<em>[i]</em> <em>)</em><em
                                     class="orange">;</em>
                             </p>
+<!--                            <p class="white-gray">-->
+<!--                                <em class="purple ml-40">console</em>.<em class="deep-yellow">log</em>(<em class="deep-green text">'Click Run Button!'</em><em>)</em><em-->
+<!--                                    class="orange">;</em>-->
+<!--                            </p>-->
                             <p class="white-gray">}</p>
                         </div>
                         <div class="result-area">
@@ -363,8 +379,7 @@
                                     <div class="tech">
                                         <em class="tech-name">html</em>
                                         <em class="tech-desc">
-                                            간단한 HTML 구조 설계 및 Timeleaf를 활용하여 HTML과 Controller에서 활용하는 Java 문법과의 연동이 가능하며
-                                            적절한 class 부여가 가능합니다.
+                                            HTML 구조 설계 및 Timeleaf를 활용하여 HTML과 Controller에서 활용하는 Java 문법과의 연동이 가능하며 적절한 class 및 속성 부여가 가능합니다.
                                         </em>
                                     </div>
                                     <div class="tech">
@@ -390,7 +405,7 @@
                                     <div class="tech">
                                         <em class="tech-name">java</em>
                                         <em class="tech-desc">
-                                            자바 기초 및 자료구조에 대한 이해도 있음. 객체지향 문법에 대한 이해도가 존재함. 알고리즘 문제풀이를 통해 Java에 대한 이해도가
+                                            자바 기초 및 자료구조에 대한 이해도 있습니다.<br> 객체지향 문법에 대한 이해도가 존재합니다.<br> 알고리즘 문제풀이를 통해 Java에 대한 이해도가
                                             있습니다.<br>Spring Boot를 사용하여 웹 개발하는 것에 있어 원활한 구현을 가능케 합니다.<br>
                                             접근자(Public, Private, Default, Protected)를 잘 이해하고 있으며 적절한 사용이 가능합니다.
                                         </em>
@@ -400,17 +415,17 @@
                                         <em class="tech-desc">
                                             Java와 DataBase를 활용한 웹 개발이 가능합니다.<br>회원가입, e-mail 인증, 주소 찾기, 게시판 만들기 및 게시글
                                             작성, 댓글 작성, 대댓글 작성 등 CRUD 기능 구현이 가능합니다.<br>
-                                            또한, CRUD 기능 수행 작업을 수행하는 것에 있어 차질 없는 업무 수행이 가능함.<br>
-                                            Controller, Service, IMapper 인터페이스, Mapper 간의 관계와 어노테이션을 활용하여 적절한 연동을 가능케 함.
+                                            또한, CRUD 기능 수행 작업을 수행하는 것에 있어 차질 없는 업무 수행이 가능합니다.<br>
+                                            Controller, Service, IMapper 인터페이스, Mapper 간의 관계와 어노테이션을 활용하여 적절한 연동을 가능합니다.
                                         </em>
                                     </div>
                                     <div class="tech">
                                         <em class="tech-name">database</em>
                                         <em class="tech-desc">
                                             SQL 문법에 대한 이해도가 있으며 주로 MariaDB를 사용하며, JDBC, MyBatis를 활용하여 DB와 Java의 연동이
-                                            가능함.<br>
-                                            기본키, 외래키, 유니크 키에 대해 정확히 이ㅎ하고 있으며, 적절한 사용이 가능함.<br>
-                                            JOIN 역시 충분한 이해도가 있으며 상황에 따른 적절한 활용이 가능함.
+                                            가능합니다.<br>
+                                            기본키, 외래키, 유니크 키에 대해 정확히 이ㅎ하고 있으며, 적절한 사용이 가능합니다.<br>
+                                            JOIN 역시 충분한 이해도가 있으며 상황에 따른 적절한 활용이 가능합니다.
                                         </em>
                                     </div>
                                 </div>
@@ -440,7 +455,7 @@
                                         <a href="https://github.com/Babsang0826/Megabox" target="_blank">GitHub</a>
                                     </span>
                                     <span class="btn detail">
-                                        <a href="https://myung-it.tistory.com" target="_blank">Details</a>
+                                        <a href="https://myung-it.tistory.com/44" target="_blank">Details</a>
                                     </span>
                                 </div>
                             </div>
@@ -451,46 +466,36 @@
                                         <a href="https://myung.dev" target="_blank">IntelliJ'st Portfolio</a>
                                     </span>
                                     <span class="project-summary">개인 포트폴리오 페이지<br><br>
+                                        인텔리제이 스타일의 개인 포트폴리오<br>
                                     </span>
                                 </div>
                                 <div class="btn-area">
                                     <span class="btn github">
-                                        <a href="#">GitHub</a>
+                                        <a href="https://github.com/tmdaud/intelliJ-st-Portfolio"
+                                           target="_blank">GitHub</a>
                                     </span>
                                     <span class="btn detail">
-                                        <a href="#">Details</a>
+                                        <a href="https://myung-it.tistory.com/45" target="_blank">Details</a>
                                     </span>
                                 </div>
                             </div>
                             <div class="project">
-                                <img th:src="@{/images/megabox.png}" alt="">
+                                <img th:src="@{/images/matzip.png}" alt="">
                                 <div class="project-info">
-                                    <span class="project-title">Megabox Clone</span>
+                                    <span class="project-title">
+                                        <a href="https://matzip.myung.dev/" target="_blank">Matzip</a>
+                                    </span>
                                     <span class="project-summary">
-                                        메가박스 클론코딩 프로젝트
+                                        주변 맛집 검색 사이트<br><br>
+                                        카카오맵 API를 활용하여 소셜 로그인, 검색, 리뷰 등 기능 구현
                                     </span>
                                 </div>
                                 <div class="btn-area">
                                     <span class="btn github">
-                                        <a href="#">GitHub</a>
+                                        <a href="https://github.com/tmdaud/matzip" target="_blank">GitHub</a>
                                     </span>
                                     <span class="btn detail">
-                                        <a href="#">Details</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="project">
-                                <img th:src="@{/images/megabox.png}" alt="">
-                                <div class="project-info">
-                                    <span class="project-title">Megabox Clone</span>
-                                    <span class="project-summary">메가박스 클론코딩 프로젝트</span>
-                                </div>
-                                <div class="btn-area">
-                                    <span class="btn github">
-                                        <a href="#">GitHub</a>
-                                    </span>
-                                    <span class="btn detail">
-                                        <a href="#">Details</a>
+                                        <a href="https://myung-it.tistory.com/46" target="_blank">Details</a>
                                     </span>
                                 </div>
                             </div>
@@ -510,45 +515,43 @@
                             <p class="second">&nbsp;&nbsp;&nbsp;&nbsp;email:
                                 <a href="#">choi_4349@naver.com</a>;
                             </p>
-                            <p class="second">&nbsp;&nbsp;&nbsp;GitHub:
+                            <p class="second">&nbsp;&nbsp;&nbsp;gitHub:
                                 <a href="https://github.com/tmdaud" target="_blank">github.com/tmdaud</a>;
                             </p>
-                            <p class="second">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blog:
+                            <p class="second">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blog:
                                 <a href="https://myung-it.tistory.com/" target="_blank">myung-it.tistory.com</a>;
                             </p>
-                            <p class="second">&nbsp;&nbsp;&nbsp;&nbsp;Kakao:
+                            <p class="second">&nbsp;&nbsp;&nbsp;&nbsp;kakao:
                                 <a href="#">choi4349</a>;
                             </p>
-                            <p class="second">Instagram:
-                                <a href="#"> _myunng</a>;
+                            <p class="second">instagram:
+                                <a href="https://www.instagram.com/_myunng/" target="_blank"> _myunng</a>;
                             </p>
                             <p class="second">}</p>
-                            <p class="second"></p>
+                            <p></p>
+                            <p></p>
                             <form id="form">
                                 <div class="content-area">
                                     <p class="deep-yellow">#send-Mail<span class="white-gray ml-10"> {</span></p>
                                     <p class="field">
-                                        <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</label>
+                                        <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:</label>
                                         <input class="ml-10" type="text" name="name" id="name">
                                     </p>
                                     <p class="field">
-                                        <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;Email:</label>
-                                        <input class="ml-10"  type="text" name="email" id="email">
+                                        <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;email:</label>
+                                        <input class="ml-10" type="text" name="email" id="email">
                                     </p>
                                     <p class="field">
-                                        <label for="message">&nbsp;&nbsp;Message:</label>
-                                        <input class="ml-10"  type="text" name="message" id="message">
+                                        <label for="message">&nbsp;&nbsp;message:</label>
+                                        <input class="ml-10" type="text" name="message" id="message">
                                     </p>
-                                    <p>send-Mail:
-                                        <input class="ml-10"  type="submit" id="button" value="Send Email">
+                                    <p>send-mail:
+                                        <input class="ml-10" type="submit" id="button" value="Send Email">
                                     </p>
                                     <p>}</p>
                                 </div>
                             </form>
                         </div>
-<!--                        <div class="send-email">-->
-
-<!--                        </div>-->
                         <script type="text/javascript"
                                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 

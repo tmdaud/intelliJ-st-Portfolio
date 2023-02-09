@@ -99,7 +99,7 @@ contentFifth[2].addEventListener('dblclick', () => {
 const skillsRunBtn = document.querySelector('.run-btn.skills');
 const skillsStopBtn = document.querySelector('.stop-btn.skills');
 
-tabs[0].addEventListener('click', ()=> {
+tabs[0].addEventListener('click', () => {
     skillsRunBtn.classList.remove('on');
     skillsStopBtn.classList.remove('on');
     runBtn.classList.add('on');
@@ -116,6 +116,7 @@ tabs[2].addEventListener('click', () => {
 
 const skillTypes = document.querySelectorAll('.skill-type');
 const techs = document.querySelectorAll('.tech');
+
 function skillType() {
     for (let skillType1 of skillTypes) {
         skillType1.classList.add('on');
@@ -228,7 +229,7 @@ skillsCloseBtn.addEventListener('click', () => {
 const btn = document.getElementById('button');
 
 document.getElementById('form')
-    .addEventListener('submit', function(event) {
+    .addEventListener('submit', function (event) {
         event.preventDefault();
 
         btn.value = 'Sending...';
@@ -245,6 +246,59 @@ document.getElementById('form')
                 alert(JSON.stringify(err));
             });
     });
+
+const contentFirst = aside.querySelector('.first');
+const contentSecond = aside.querySelector('.second');
+const contentThird = aside.querySelector('.third');
+const contentForth = aside.querySelector('.forth');
+
+contentFirst.querySelector('.arrow').addEventListener('click', () => {
+    contentSecond.classList.toggle('on');
+    for (let elementNodeListOfElement of contentFirst.querySelectorAll('ion-icon')) {
+        elementNodeListOfElement.classList.toggle('off');
+    }
+    contentSecond.querySelectorAll('ion-icon')[0].classList.remove('off');
+    contentSecond.querySelectorAll('ion-icon')[1].classList.add('off');
+    contentThird.classList.remove('on');
+    contentForth.classList.remove('on');
+    for (let contentFifthElement of contentFifth) {
+        contentFifthElement.classList.remove('on');
+    }
+});
+
+contentSecond.querySelector('.arrow').addEventListener('click', () => {
+    contentThird.classList.toggle('on');
+    contentForth.classList.remove('on');
+    for (let elementNodeListOfElement of contentSecond.querySelectorAll('ion-icon')) {
+        elementNodeListOfElement.classList.toggle('off');
+    }
+    contentThird.querySelectorAll('ion-icon')[0].classList.remove('off');
+    contentThird.querySelectorAll('ion-icon')[1].classList.add('off');
+    for (let contentFifthElement of contentFifth) {
+        contentFifthElement.classList.remove('on');
+    }
+});
+
+contentThird.querySelector('.arrow').addEventListener('click', () => {
+    contentForth.classList.toggle('on');
+    for (let elementNodeListOfElement of contentThird.querySelectorAll('ion-icon')) {
+        elementNodeListOfElement.classList.toggle('off');
+    }
+    for (let contentFifthElement of contentFifth) {
+        contentFifthElement.classList.remove('on');
+    }
+    contentForth.querySelectorAll('ion-icon')[0].classList.remove('off');
+    contentForth.querySelectorAll('ion-icon')[1].classList.add('off');
+});
+
+contentForth.querySelector('.arrow').addEventListener('click', () => {
+    for (let elementNodeListOfElement of contentForth.querySelectorAll('ion-icon')) {
+        elementNodeListOfElement.classList.toggle('off');
+    }
+    for (let contentFifthElement of contentFifth) {
+        contentFifthElement.classList.toggle('on');
+    }
+});
 
 
 

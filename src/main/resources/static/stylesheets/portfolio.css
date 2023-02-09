@@ -303,9 +303,13 @@ body > .container > .main {
 }
 
 .main > aside > .side-contents > .content {
-    display: flex;
+    display: none;
     align-items: center;
     padding: 2px 1rem 2px 1rem;
+}
+
+.main > aside > .side-contents > .content.on {
+    display: flex;
 }
 
 .main > aside > .side-contents > .content > span {
@@ -359,6 +363,9 @@ body > .container > .main {
 
 }
 
+ion-icon.off {
+    display: none;
+}
 
 .main > aside > .side-contents > i {
     color: #aaa;
@@ -413,7 +420,7 @@ body > .container > .main {
 
 .main > .content-container > .content-tab > .tab > img.x {
     width: 0.8rem;
-    margin: 0 8px 0 16px;
+    margin: 0 8px;
 }
 
 section {
@@ -735,7 +742,7 @@ section.project > .content-wrap > .content > .project-container {
 .project-container > .project > .project-info {
     display: flex;
     flex-direction: column;
-    margin: 1rem 2rem;
+    margin: 0 2rem 1rem 2rem;
     cursor: default;
 }
 
@@ -975,6 +982,13 @@ input[type="submit"]:hover {
     }
     section.skills > .content-wrap > .content > div {
         font-size: 0.9rem;
+    }
+    .header > .header-bottom > .bottom-left > span,
+    .main > .content-container > .content-tab {
+        font-size: 0.8rem!important;
+    }
+    .main > .content-container > .content-tab > .tab {
+        padding: 3px 10px 0 5px;
     }
 }
 
